@@ -27,6 +27,7 @@ nimed=[]
 for i in range(5):
     nimi=input("Sisesta nimi: ")
     nimed.append(nimi)
+
 print("Sisestatud: ",nimed)
 nimed.sort()
 print("Sorteeritud: ",nimed)
@@ -35,3 +36,15 @@ nimi=input("Mis nimi on vaja asendada? ")
 indeks=nimed.index(nimi)
 uus_nimi=input("Uus nimi: ")
 nimed[indeks]=uus_nimi
+nimed=[uus_nimi if vana_nimi==nimi else vana_nimi for vana_nimi in nimed]
+nimed=set(nimed)
+print(nimed)
+vanused=[]
+for i in range(5):
+    v=int(input("Vanus: "))
+    nimed.append(v)
+sum_=sum(vanused)
+min_=min(vanused)
+max_=max(vanused)
+kesk=sum_/len(vanused)
+print("Keskmine on {kesk}, \nSuurim on {max}, \nVäiksem on {min_}, \nSumma on {sum_}")
