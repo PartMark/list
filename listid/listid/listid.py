@@ -27,8 +27,11 @@ nimed=[]
 for i in range(5):
     nimi=input("Sisesta nimi: ")
     nimed.append(nimi)
-
 print("Sisestatud: ",nimed)
 nimed.sort()
 print("Sorteeritud: ",nimed)
 print("Viimasena oli lisatud: ",nimi)
+nimi=input("Mis nimi on vaja asendada? ")
+indeks=nimed.index(nimi)
+uus_nimi=input("Uus nimi: ")
+nimed[indeks]=uus_nimi
